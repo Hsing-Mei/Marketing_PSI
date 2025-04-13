@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>廣告態度調查</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // 問卷連結陣列
+        const surveys = [
+            "https://forms.gle/dAhUQnR5sdJWN4ELA",  // 問卷1
+            "https://forms.gle/jBwUkWsV96cdexmq8",  // 問卷2
+            "https://forms.gle/JiSGd63fupKEcads8",  // 問卷3
+            "https://forms.gle/wMtTPQoZ6B34WB5Z7"   // 問卷4
+        ];
+
+        // 隨機選擇問卷並跳轉
+        function redirectToSurvey() {
+            const randomIndex = Math.floor(Math.random() * surveys.length);
+            window.location.href = surveys[randomIndex];
+        }
+
+        // 頁面載入後自動執行
+        window.onload = redirectToSurvey;
+    </script>
+</head>
+<body>
+    <h2>請稍候...</h2>
+</body>
+</html>
